@@ -14,7 +14,7 @@ const Profile = ({ token }) => {
 
   const fetchData = async () => {
     await axios
-      .get("http://localhost:8383/api/user/get-user", {
+      .get("https://jwt-auth-backend-9vjo.onrender.com/api/user/get-user", {
         headers: {
           Authorization: token,
         },

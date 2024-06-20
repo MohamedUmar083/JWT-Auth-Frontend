@@ -13,7 +13,10 @@ const Login = ({ setToken }) => {
     e.preventDefault();
     const payload = { email, password };
     await axios
-      .post("http://localhost:8383/api/user/login-user", payload)
+      .post(
+        "https://jwt-auth-backend-9vjo.onrender.com/api/user/login-user",
+        payload
+      )
       .then((res) => {
         setToken(res.data.token);
         toast.success(res.data.Message);

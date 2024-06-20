@@ -15,7 +15,10 @@ const Register = () => {
     e.preventDefault();
     const payload = { username, email, password };
     await axios
-      .post("http://localhost:8383/api/user/register-user", payload)
+      .post(
+        "https://jwt-auth-backend-9vjo.onrender.com/api/user/register-user",
+        payload
+      )
       .then((res) => toast.success(res.data.Message))
       .catch((error) => {
         //console.log(error);
